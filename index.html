@@ -93,7 +93,7 @@
     <section id="houses">
         <div class="wrapper">
             <div class="houses">
-                <h2>All about the houses</h2>
+                <h2>The houses</h2>
                 <div class="houses-list">
                     <div class="house bg-gr">
                         <div class="house-btn">
@@ -186,8 +186,52 @@
         </div>
     </section>
     <section id="contact">
-        <h2>Section 4</h2>
-        <p>This is the content of Section 4.</p>
+        <div class="wrapper">
+            <div class="letter">
+                <div class="form-container">
+                    <form id="admission-form">
+                        <h2>Contact</h2>
+                        <p>Send your admission letter to <br><span>Hogwarts School of Witchcraft and Wizardry.</span></p>
+                        <div class="label-group">
+                            <label for="text-name">Name: *</label>
+                            <input type="text" id="text-name" name="text-name" required>
+                        </div>
+                        <div class="label-group">
+                            <label for="text-email">Email: *</label>
+                            <input type="email" id="text-email" name="text-email" required>
+                        </div>
+                        <div class="label-group">
+                            <label for="dropdown">Select your House: *</label>
+                            <select id="dropdown" name="dropdown">
+                                <option value="gryfffindor">Gryfffindor</option>
+                                <option value="slytherin">Slytherin</option>
+                                <option value="hufflepuff">Hufflepuff</option>
+                                <option value="ravenclaw">Ravenclaw</option>
+                            </select>
+                        </div>
+                        <div class="label-group">
+                            <label for="profile">Your profile: *</label>
+                            <input type="file" id="profile" name="profile">
+                        </div>
+                        <div class="label-group">
+                            <label>Gender: *</label>
+                            <input type="radio" id="gender-male" name="gender" value="male"> Male </label>
+                            <label for="gender-male">
+                            </label>
+                            <input type="radio" id="gender-female" name="gender" value="female"> Female </label>
+                            <label for="gender-female">
+                            </label>
+                        </div>
+                        <span>(*) Field required.</span>
+                        <button id="submit-btn" type="submit">Submit</button>
+                    </form>
+                    
+                </div>
+                <div class="school-image">
+                    <img src="images/hogwarts-square.jpg" alt="">
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         <div class="wrapper">
@@ -196,13 +240,13 @@
                 <div class="left">
                     <div class="social">
                         <p class="follow">Follow us</p>
-                        <a href="https://www.facebook.com/groups/OfficialHarryPotterFans/">
+                        <a href="https://www.facebook.com/groups/OfficialHarryPotterFans/" target="_blank">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
-                        <a href="https://www.youtube.com/@harrypotter">
+                        <a href="https://www.youtube.com/@harrypotter" target="_blank">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
-                        <a href="https://www.instagram.com/harrypotter/?hl=es">
+                        <a href="https://www.instagram.com/harrypotter/?hl=es" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
@@ -220,5 +264,7 @@
 
     <script src="/js/scrolling.js"></script>
     <script src="/js/carousel.js"></script>
+    <script src="/js/validation.js"></script>
+
 </body>
 </html>

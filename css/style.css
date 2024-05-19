@@ -4,6 +4,7 @@
     --hufflepuff: #C78F00;
     --ravenclaw: #004D95;
     --lightGrey: #828282;
+    --extraLightGrey: #E0E0E0;
     --darkGrey: #454545;
 }
 body {
@@ -19,6 +20,10 @@ h1{
     font-family: "Jaini", system-ui;
     font-weight: 400;
     font-style: normal;
+}
+h2{
+    font-size: 32px;
+    margin: 15px 0px 30px 0px;
 }
 header {
     padding: 10px;
@@ -51,8 +56,7 @@ nav {
 nav a {
     color: #000;
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 10px 10px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
@@ -69,7 +73,7 @@ section:nth-child(even) {
     padding: 50px 20px;
 }
 .wrapper {
-    max-width: 1440px;
+    max-width: 1080px;
     margin: auto;
 }
 .houses-list{
@@ -82,12 +86,11 @@ section:nth-child(even) {
 
     .house{
         display: flex;
-        border-radius: 10px;
+        border-radius: 5px;
         padding: 15px;
         width: 100%;
         max-width: 320px;
         max-height: 30px;
-        min-width: 180px;
         justify-content: space-between;
         align-items: center;
 
@@ -107,9 +110,9 @@ section:nth-child(even) {
             font-family: "Jaini", system-ui;
             font-size: 20px;
             color: white;
-            text-shadow: 0px 0px 5px black;        }
+            text-shadow: 0px 0px 5px black;        
+        }
     }
-   
 }
 .bg-gr{
     background-color: var(--gryfffindor);
@@ -124,6 +127,9 @@ section:nth-child(even) {
     background-color: var(--ravenclaw);
 }
 
+#characters{
+    padding: 50px 20px;
+}   
 .characters{
     display: flex;
     flex-direction: column;
@@ -141,10 +147,9 @@ section:nth-child(even) {
 }
 .characters-grid{
     display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
+    grid-template-columns: 0.5fr 1.5fr;
     grid-template-rows: auto;
     gap: 15px;
-    max-width: 1080px;
     margin: auto;
 }
 .main{
@@ -181,21 +186,7 @@ section:nth-child(even) {
         }
     }
 }
-/* 
-.img-char{
-    border-radius: 5px;
-    width: 100%;
-    height: auto;
 
-}
-.main{
-    .img-char{
-        border-radius: 5px;
-        width: 100%;
-        height: auto;
-    
-    } 
-} */
 /*===CAROUSEL===*/
 .arrow {
     position: absolute;
@@ -239,7 +230,6 @@ section:nth-child(even) {
     background-size: cover;
     flex-direction: column;
 
-    
     .book-grid{
         display: grid;
         grid-template-columns: auto auto;
@@ -284,17 +274,14 @@ section:nth-child(even) {
     background-image: url('../images/slide-ravenclaw.jpg');
 }
 
-#characters{
-    padding: 50px 20px;
-}   
 
-
-/*FOOTER*/
+/*===FOOTER===*/
 footer {
     background-color: #ffffff;
     color: #000000;
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px 20px 20px;
+    border-top: 1px solid var(--extraLightGrey);
 }
 .footer-links{
     display: grid;
@@ -346,11 +333,107 @@ h5{
 .copyright{
     font-size: 12px;
 }
+#contact{
+    padding: 50px 20px 70px 20px;
+}
+#admission-form {
+    text-align: left;
+}
+#admission-form > div{
+    margin: 0 0 20px 0;    
+}
+#admission-form > span{
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 15px;
+    display: block;
+}
+.letter{
+    display: grid;
+    grid-template-columns: 60% 38%;
+    grid-template-rows: auto;
+    gap: 15px;
+}
+.school-image > img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+#admission-form > p {
+    font-size: 20px;
+}
+#admission-form > p > span{
+    font-family: "Jaini", system-ui;
+    font-size: 24px;
+}
+.form-container{
+    order: -1;
+}
+.label-group {
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    label {
+        min-width: fit-content;
+        padding-right: 10px;
+        text-align: left;
+    }
+    input[type=text], input[type=email], input[type=radio]{
+        width: -webkit-fill-available;
+        height: 40px;
+        padding: 0px 15px;
+    }
+    input[type=file]{
+        width: -webkit-fill-available;
+        height: 40px;
+        padding: 0;
+    }
+    input[type=text], input[type=email]{
+        border-radius: 5px;
+        border: 1px solid var(--extraLightGrey);
+    }
+    select{
+        width: -webkit-fill-available;
+        height: 45px;
+        border-radius: 5px;
+        border: 1px solid var(--extraLightGrey);
+        padding: 0px 15px;
+    }
+    
+    input[type=radio]{
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+    }
+}
+#submit-btn {
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #828282;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border: none;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+#submit-btn:hover {
+    background: #454545;
+    text-decoration: none;
+}
+
+
 
 /*===MEDIA QUERY===*/
-/* Mobile*/
-
-@media (max-width: 767px) {
+/* MOBILE*/
+@media all and (max-width: 480px) {
     header {
         flex-direction: column;
     }
@@ -385,7 +468,6 @@ h5{
                 grid-area: 2 / 1 / 2 / none;
             }
         }
-        
         .book-grid > img {
             width: 60px;
             grid-area: 1 / 1 / 1 / 1
@@ -400,7 +482,6 @@ h5{
         margin: auto;
     }
     .char-row{
-
         .secondary {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -408,12 +489,71 @@ h5{
             gap: 15px;
         }
     }
+    .form-container{
+        order: 1;
+    }
+    .letter {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+    .label-group {
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-    
+
+/* TABLET */
+@media (min-width: 480px) and (max-width: 1023px) {
+    .characters-grid {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        grid-template-rows: auto;
+        gap: 15px;
+        margin: auto;
+    }
+    .char-row{
+        .secondary {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 15px;
+        }
+    }
+    .houses-list{
+        .house{
+            max-width: calc(50% - 40px);
+
+        }
+    } 
 }
-/* Desktop */
+
+/* DESKTOP */
 @media (min-width: 1024px) {
-    
+    .carousel-item{
+        .book-grid{
+            .history {
+                font-size: 18px;
+                line-height: 1.25;
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+    .houses-list{
+        .house{
+            max-width: calc(25% - 40px);;
+
+        }
+    }
+    .letter {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        gap: 15px;
+    }
 }
